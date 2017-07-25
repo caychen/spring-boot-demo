@@ -1,0 +1,14 @@
+springboot启动方式：
+	1. 在src/main/java/下找到xxxApplication.java文件(本例为SpringbootDemoApplication.java)，然后右键Run As文件Java Application启动服务器
+	
+	2. 使用cmd命令，进入项目的目录下，执行mvn spring-boot:run启动服务器
+	
+	3. 使用cmd命令，进入项目的目录下，执行mvn install进行编译，完成后进入target目录下，多出一个xxx.jar的文件(本例中为springboot-demo-0.0.1-SNAPSHOT.jar)
+		执行java -jar xxx.jar
+		
+		
+项目属性的配置文件：尽量使用yml文件，属性名和值之间需要多写一个空格，不然会报错
+	server:
+	  port: 8080
+	  context-path: /springboot-demo
+	  

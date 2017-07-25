@@ -1,0 +1,31 @@
+#表示使用什么配置文件，如下表示dev开发模式，则使用application-dev.yml配置文件
+#spring:
+#  profiles:
+#    active: dev
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: Cay20130621
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+      
+    
+server:
+  port: 8080  #端口
+  context-path: /springboot-demo #contextpath
+  
+#自定义配置属性，在需要的地方使用@Value("${xxx}")
+age: 20
+name: Hello
+
+content: "name: ${name}, age: ${age} "
+
+girl: #使用girl，使用@Autowired注解方式注入
+  name: Kitty
+  age: 18
